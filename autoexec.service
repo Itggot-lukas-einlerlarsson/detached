@@ -1,0 +1,12 @@
+
+[Unit]
+Description=run autoexec.sh at start
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/app/autoexec.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
